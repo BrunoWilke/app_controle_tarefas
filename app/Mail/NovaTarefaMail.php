@@ -21,7 +21,9 @@ class NovaTarefaMail extends Mailable
      */
     public function __construct(Tarefa $tarefa)
     {
-        //
+        $this->tarefa = $tarefa->tarefa;
+        $this->data_limite_conclusao = date('d/m/Y',strtotime($tarefa->data_limite_conclusao));
+        $this->url = 'http://localhost:8000/tarefa/'.$tarefa->id;
     }
 
     /**
@@ -31,6 +33,6 @@ class NovaTarefaMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.nova-tarefa');
+        return $this->markdown('emails.nova-tarefa')->subject('Nova Tarefa Criada');
     }
 }
