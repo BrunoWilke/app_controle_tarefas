@@ -11,9 +11,9 @@
                     <fieldset disabled>
                         <div class="mb-3">
                             <label class="form-label">Data Limite de Conclusão</label>
-                            <input type="date" class="form-control" value = "{{ $tarefa->data_limite_conclusao}}">
+                            <input type="date" class="form-control" value="{{ $tarefa->data_limite_conclusao}}">
                         </div>
-                        <a href="{{ route('tarefa.index') }}" class="btn btn-primary">Voltar</a>
+                        <a href="{{ route('tarefa.create') }}" class="btn btn-primary">Voltar</a>
                     </fieldset>    
                 </div>
             </div>
