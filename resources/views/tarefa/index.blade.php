@@ -12,7 +12,9 @@
                     <div class="col-6">
                         <div class="float-right">
                             <a href="{{ route('tarefa.create') }}" class="mr-3">Nova Tarefa</a>
-                            <a href="{{ route('tarefa.exportacao') }}" >XLSX</a>
+                            <a href="{{ route('tarefa.exportacao', ['extensao' => 'xlsx']) }}" class="mr-3">XLSX</a>
+                            <a href="{{ route('tarefa.exportacao', ['extensao' => 'csv']) }}" class="mr-3">CSV</a>
+                            <a href="{{ route('tarefa.exportacao', ['extensao' => 'pdf']) }}">PDF</a>
                         </div>
                     </div>
                 </div>

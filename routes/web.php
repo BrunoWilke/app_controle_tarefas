@@ -24,7 +24,7 @@ Auth::routes(['verify'=>true]);
     ->name('home')
     ->middleware('verified'); */
 
-Route::get('tarefa/exportacao','App\Http\Controllers\TarefaController@exportacao')->name('tarefa.exportacao');    
+Route::get('tarefa/exportacao/{extensao}','App\Http\Controllers\TarefaController@exportacao')->name('tarefa.exportacao');    
 Route::resource('tarefa', 'App\Http\Controllers\TarefaController')->middleware('verified');
 Route::get('/mensagem-teste', function(){
     return new MensagemTesteMail();
